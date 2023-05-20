@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<title>dcOS - Documentation</title>
+		<link
+			rel="shortcut icon"
+			href="./assets/imgs/favicon.ico"
+			type="image/x-icon" />
 		<meta charset="UTF-8" />
 		<meta content="dcOS - Documentation" property="og:title" />
 		<meta
@@ -46,7 +50,7 @@
 			}
 
 			h3 {
-                color: #ff0000;
+				color: #ff0000;
 			}
 
 			p {
@@ -57,6 +61,9 @@
 			a {
 				color: #ff0000;
 			}
+            @media (max-width: 768px) {
+
+            }
 
 			.code {
 				background-color: #1f1f1f;
@@ -66,12 +73,17 @@
 				border-radius: 10px;
 			}
 
-			.command {
-				font-weight: 700;
+			#dc {
+				margin-left: 0%;
+				width: 100%;
 			}
 
-			.widget-container {
-				margin-left: 50px;
+			#link:hover {
+				text-decoration: underline;
+			}
+
+			.command {
+				font-weight: 700;
 			}
 
 			.widget-container iframe {
@@ -88,17 +100,13 @@
 				.content {
 					max-width: 100%;
 				}
-
-				.widget-container {
-					margin: 20px 0;
-				}
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
-				<h1>dcOS Bot Documentation</h1>
+				<h1>dcOS - Documentation</h1>
 
 				<h2>Introduction</h2>
 				<p>
@@ -107,11 +115,18 @@
 					documentation will help you get started with dcOS and
 					explain how to use it. If you still have questions after
 					reading this, feel free to join our
-					<a href="https://discord.com/invites/N4UajQBzDt"
+					<a id="link" onclick="window.open('https://discord.com/invite/N4UajQBzDt'); return false;"
 						>support server</a
 					>.
 				</p>
-
+                <div class="widget-container">
+                    <iframe
+                        src="https://canary.discord.com/widget?id=1041584189138554880&theme=dark"
+                        allowtransparency="true"
+                        frameborder="0"
+						id="dc"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
 				<h2><a id="setup">Setting up dcOS</a></h2>
 				<p>
 					To add dcOS to your Discord server, go to another server
@@ -125,7 +140,7 @@
 				<p>
 					If you don't share a server with dcOS you can just use this
 					<a
-						href="https://discord.com/api/oauth2/authorize?client_id=961632552148402218&permissions=8&scope=bot%20applications.commands"
+						id="link" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=961632552148402218&permissions=8&scope=bot%20applications.commands'); return false;"
 						>bot invite link</a
 					>
 					to add the bot to your favorite server.
@@ -173,9 +188,7 @@
 						<b>duration:</b> The duration of the giveaway
 						(selection)
 					</li>
-                    <li>
-                        <b>Permissions:</b> Manage Server
-                    </li>
+					<li><b>Permissions:</b> Manage Server</li>
 				</ul>
 				<div class="code">
 					<span class="command"
@@ -187,7 +200,7 @@
 					<li>
 						<b>message id:</b> The ID of the message containing the
 						giveaway (<a
-							href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"
+							id="link" onclick="window.open('https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-'); return false;"
 							>how to obtain a message id</a
 						>)
 					</li>
@@ -202,7 +215,7 @@
 					<li>
 						<b>message id:</b> The ID of the message containing the
 						giveaway (<a
-							href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"
+							id="link" onclick="window.open('https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-'); return false;"
 							>how to obtain a message id</a
 						>)
 					</li>
@@ -331,15 +344,17 @@
 					cooldown...) and just copies the channel.
 				</p>
 				<div class="code">
-					<span class="command">/purge &lt;channel&gt;</span>
+					<span class="command">/purge</span>
 				</div>
 				Purge a channel<br />
 				<ul>
-					<li>
-						<b>channel:</b> The channel to be purged (text channel)
-					</li>
 					<li><b>Permissions:</b> Administrator</li>
 				</ul>
+				<p>
+					Once you run this command you will be prompted to enter a
+					security code. The bot's message contains it. For example:
+				</p>
+				<img src="./assets/imgs/Purge.png" />
 				<p>
 					<b>⚠️ Be careful:</b> Any bot setup using the channels id
 					will be removed due to the creation of a new channel!<br /><b
@@ -384,20 +399,14 @@
 				<p>
 					If you need any assistance or have any questions, please
 					join our
-					<a href="https://discord.com/invites/N4UajQBzDt"
+					<a id="link" onclick="window.open('https://discord.com/invite/N4UajQBzDt'); return false;"
 						>support server</a
 					>
 					and create a new forum post.
 				</p>
 			</div>
 
-			<div class="widget-container">
-				<iframe
-					src="https://canary.discord.com/widget?id=1041584189138554880&theme=dark"
-					allowtransparency="true"
-					frameborder="0"
-					sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-			</div>
+
 		</div>
 	</body>
 </html>
