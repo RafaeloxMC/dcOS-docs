@@ -1,13 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dcOS | Documentation</title>
-</head>
-<body>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.scss">
-    <h1>dcOS | Documentation</h1>
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="dcOS - Documentation" property="og:title" />
+		<meta
+			content="dcOS is an all-in-one Discord bot that allows you to do basically everything. This documentation will help you get started with dcOS and explain how to use it. If you still have questions after reading this, feel free to join our support server."
+			property="og:description" />
+		<meta
+			content="https://example.com/this-is-the-site-url"
+			property="og:url" />
+		<meta
+			content="https://example.com/embedimage.png"
+			property="og:image" />
+		<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:400,700"
+			rel="stylesheet" />
+		<style>
+			body {
+				background-color: black;
+				color: white;
+				font-family: "Poppins", sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				max-width: 1500px;
+				margin: 0 auto;
+				padding: 20px;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+			}
+
+			.content {
+				text-align: justify;
+				max-width: 800px;
+			}
+
+			h1 {
+				font-size: 32px;
+				font-weight: 700;
+			}
+
+			h3 {
+                color: #ff0000;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 1.5;
+			}
+
+			a {
+				color: #ff0000;
+			}
+
+			.code {
+				background-color: #1f1f1f;
+				color: #f8f8f8;
+				font-family: Consolas, monospace;
+				padding: 10px;
+				border-radius: 10px;
+			}
+
+			.command {
+				font-weight: 700;
+			}
+
+			.widget-container {
+				margin-left: 50px;
+			}
+
+			.widget-container iframe {
+				width: 350px;
+				height: 500px;
+			}
+
+			@media (max-width: 600px) {
+				.container {
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.content {
+					max-width: 100%;
+				}
+
+				.widget-container {
+					margin: 20px 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<h1>dcOS Bot Documentation</h1>
+
+				<h2>Introduction</h2>
+				<p>
+					Welcome to the documentation for dcOS, an all-in-one Discord
+					bot that allows you to do basically everything. This
+					documentation will help you get started with dcOS and
+					explain how to use it. If you still have questions after
+					reading this, feel free to join our
+					<a href="https://discord.com/invites/N4UajQBzDt"
+						>support server</a
+					>.
+				</p>
+
+				<h2><a id="setup">Setting up dcOS</a></h2>
+				<p>
+					To add dcOS to your Discord server, go to another server
+					with the bot, run
+				</p>
+				<div class="code">
+					<span class="command">/about</span>
+				</div>
+				<p>and click on Invite.</p>
+				<img src="./assets/imgs/Invite.png" />
+				<p>
+					If you don't share a server with dcOS you can just use this
+					<a
+						href="https://discord.com/api/oauth2/authorize?client_id=961632552148402218&permissions=8&scope=bot%20applications.commands"
+						>bot invite link</a
+					>
+					to add the bot to your favorite server.
+				</p>
+
+				<h2><a id="commands">Commands</a></h2>
+				<p>
+					To use a command, type
+					<span class="command">/</span> followed by the command name.
+					(e.g. <span class="command">/about</span>)
+				</p>
+				<h3><a id="general">General</a></h3>
+				<h4>About</h4>
+				<p>
+					Get some information about dcOS. Including the current
+					version, a bot invite link and the developer.
+				</p>
+				<div class="code"><span class="command">/about</span></div>
+				Shows information about the bot<br />
+				<h4>Ping</h4>
+				<p>Get the bot's and Discords API's latency.</p>
+				<div class="code"><span class="command">/ping</span></div>
+				Shows the bot's and the API's latency<br />
+				<h3><a id="community">Community</a></h3>
+				<h4>Giveaways</h4>
+				<p>
+					dcOS advanced giveaway system. You can start giveaways, end
+					them and reroll the winner. Everyone can join or leave the
+					giveaway. Some more conditions may be added soon!
+				</p>
+				<div class="code">
+					<span class="command"
+						>/giveaway start &lt;prize&gt; &lt;winners&gt;
+						&lt;duration&gt;</span
+					>
+				</div>
+				Starts a giveaway<br />
+				<ul>
+					<li><b>prize:</b> The prize for the giveaway (text)</li>
+					<li>
+						<b>winners:</b> The number of winners to be selected
+						(number)
+					</li>
+					<li>
+						<b>duration:</b> The duration of the giveaway
+						(selection)
+					</li>
+                    <li>
+                        <b>Permissions:</b> Manage Server
+                    </li>
+				</ul>
+				<div class="code">
+					<span class="command"
+						>/giveaway end &lt;message id&gt;</span
+					>
+				</div>
+				Ends a giveaway<br />
+				<ul>
+					<li>
+						<b>message id:</b> The ID of the message containing the
+						giveaway (<a
+							href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"
+							>how to obtain a message id</a
+						>)
+					</li>
+				</ul>
+				<div class="code">
+					<span class="command"
+						>/giveaway reroll &lt;message id&gt;</span
+					>
+				</div>
+				Rerolls the giveaways winner<br />
+				<ul>
+					<li>
+						<b>message id:</b> The ID of the message containing the
+						giveaway (<a
+							href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"
+							>how to obtain a message id</a
+						>)
+					</li>
+				</ul>
+
+				<h4>Polls</h4>
+				<p>
+					Ask the community your questions! Everyone can only vote
+					once and cannot change their opinion afterwards!
+				</p>
+				<div class="code">
+					<span class="command"
+						>/poll &lt;question&gt; &lt;obstainable&gt;</span
+					>
+				</div>
+				Creates a poll<br />
+				<ul>
+					<li><b>question:</b> The question for the poll (text)</li>
+					<li>
+						<b>obstainable:</b> Whether or not obstaining is allowed
+						(true/false)
+					</li>
+				</ul>
+
+				<h4>Greeter</h4>
+				<p>
+					You got a new member? Greet him with a nice personalized
+					message!
+				</p>
+				<div class="code">
+					<span class="command"
+						>/greeter setup &lt;channel&gt; &lt;message&gt;</span
+					>
+				</div>
+				Sets up the feature<br />
+				<ul>
+					<li>
+						<b>channel:</b> The channel where the message should be
+						sent (text channel)
+					</li>
+					<li>
+						<b>message:</b> The message to be sent when a new member
+						joins (text)
+					</li>
+					<li><b>Placeholders:</b> See below</li>
+					<li><b>Permissions:</b> Manage Server</li>
+				</ul>
+				<div class="code">
+					<span class="command"
+						>/greeter message &lt;message&gt;</span
+					>
+				</div>
+				Changes the greeter message<br />
+				<ul>
+					<li>
+						<b>message:</b> The message to be sent when a new member
+						joins (text)
+					</li>
+					<li>
+						<b>Placeholders:</b> There are some Placeholders to
+						simplify the use of the feature. You can use them in the
+						message and they will be replaced with the corresponding
+						value.
+						<ul>
+							<li><b>&lt;user&gt;</b> - The user that joined</li>
+							<li>
+								<b>&lt;server&gt;</b> - The server the user
+								joined
+							</li>
+							<li>
+								<b>&lt;count&gt;</b> - The number of members on
+								the server
+							</li>
+						</ul>
+						<b>Example:</b> Welcome &lt;user&gt; to &lt;server&gt;!
+						You are the &lt;count&gt;. member!
+					</li>
+				</ul>
+				<div class="code">
+					<span class="command"
+						>/greeter channel &lt;channel&gt;</span
+					>
+				</div>
+				Changes the greeter channel<br />
+				<ul>
+					<li>
+						<b>channel:</b> The channel where the message should be
+						sent (text channel)
+					</li>
+				</ul>
+				<div class="code">
+					<span class="command">/greeter toggle</span>
+				</div>
+				Toggles the feature. The configuration will be saved!<br />
+
+				<h3><a id="moderation">Moderation</a></h3>
+				<h4>Timeout</h4>
+				<p>
+					Timeout a member for a certain amount of time. The member
+					will be muted and cannot send messages or react to messages.
+					Voice or video calls on the server will be blocked too!
+				</p>
+				<div class="code">
+					<span class="command"
+						>/timeout &lt;user&gt; &lt;duration&gt;
+						&lt;reason&gt;</span
+					>
+				</div>
+				Timeout a user on your server<br />
+				<ul>
+					<li>
+						<b>user:</b> The user to be timed out (user mention)
+					</li>
+					<li>
+						<b>duration:</b> The duration of the timeout (selection)
+					</li>
+					<li><b>reason:</b> The reason for the timeout (text)</li>
+					<li><b>Permissions:</b> Timeout members</li>
+				</ul>
+
+				<h4>Purge</h4>
+				<p>
+					Your favourite channel was flooded with useless messages?
+					Just clear the whole channel. The timeout feature nukes the
+					whole channel, takes all settings (like permissions, chat
+					cooldown...) and just copies the channel.
+				</p>
+				<div class="code">
+					<span class="command">/purge &lt;channel&gt;</span>
+				</div>
+				Purge a channel<br />
+				<ul>
+					<li>
+						<b>channel:</b> The channel to be purged (text channel)
+					</li>
+					<li><b>Permissions:</b> Administrator</li>
+				</ul>
+				<p>
+					<b>⚠️ Be careful:</b> Any bot setup using the channels id
+					will be removed due to the creation of a new channel!<br /><b
+						>⚠️ Use with caution!</b
+					>
+				</p>
+
+				<h3><a id="fun">Fun</a></h3>
+				<h4>8ball</h4>
+				<p>Ask the magic 8ball your questions and get an answer!</p>
+				<div class="code">
+					<span class="command">/8ball &lt;question&gt;</span>
+				</div>
+				Ask the magic 8ball<br />
+				<ul>
+					<li><b>question:</b> The question for the 8ball (text)</li>
+				</ul>
+				<h4>Meme</h4>
+				<p>Get a random meme from reddit!</p>
+				<div class="code"><span class="command">/meme</span></div>
+				Get a random meme<br />
+				<h4>Hug</h4>
+				<p>Hug your best friend!</p>
+				<div class="code">
+					<span class="command">/hug &lt;user&gt;</span>
+				</div>
+				Hug someone<br />
+				<ul>
+					<li><b>user:</b> The user to be hugged (user mention)</li>
+				</ul>
+				<h4>Slap</h4>
+				<p>Slap someone that was mean to you!</p>
+				<div class="code">
+					<span class="command">/slap &lt;user&gt;</span>
+				</div>
+				Slap someone<br />
+				<ul>
+					<li><b>user:</b> The user to be slapped (user mention)</li>
+				</ul>
+
+				<h2><a id="support">Support</a></h2>
+				<p>
+					If you need any assistance or have any questions, please
+					join our
+					<a href="https://discord.com/invites/N4UajQBzDt"
+						>support server</a
+					>
+					and create a new forum post.
+				</p>
+			</div>
+
+			<div class="widget-container">
+				<iframe
+					src="https://canary.discord.com/widget?id=1041584189138554880&theme=dark"
+					allowtransparency="true"
+					frameborder="0"
+					sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			</div>
+		</div>
+	</body>
 </html>
