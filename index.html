@@ -368,6 +368,60 @@
 					<span class="command">/globalban toggle</span>
 				</div>
 
+				<h3><a id="economy">Economy</a></h3>
+				<h4>Unions</h4>
+				<p>In version V2-0.0.4 we added an own economy system. It contains unions, just like the Euro or something. You can create a union or join one.</p>
+				<div class="code">
+					<span class="command">/union create &lt;currency&gt; &lt;short&gt; &lt;description&gt;</span>
+				</div>
+				Creates a new union for your server<br />
+				<ul>
+					<li><b>currency:</b> The full name of your unions currency (text)</li>
+					<li><b>short:</b> The short name of your unions currency (text / max. 3 chars)</li>
+					<li><b>description:</b> A short description of your union / currency (text)</li>
+					<li><b>Permissions:</b> Administrator</li>
+				</ul>
+				<div class="code">
+					<span class="command">/union delete</span>
+				</div>
+				Deletes your servers current union<br />
+				<ul>
+					<li><b>Permissions:</b> Administrator</li>
+				</ul>
+				<div class="code">
+					<span class="command">/union invite &lt;serverid&gt;</span>
+				</div>
+				Invites a server to your union<br />
+				<ul>
+					<li><b>serverid:</b> The ID of the server to be invited (text)</li>
+					<li><b>Permissions:</b> Administrator</li>
+				</ul>
+				<div class="code">
+					<span class="command">/union leave</span>
+				</div>
+				Leaves your servers current union<br />
+				<ul>
+					<li><b>Permissions:</b> Administrator</li>
+				</ul>
+				<div class="code">
+					<span class="command">/union kick</span>
+				</div>
+				Kicks a server from your union<br />
+				<ul>
+					<li><b>Permissions:</b> Administrator</li>
+				</ul>
+				<div class="code">
+					<span class="command">/union info &lt;nameorshort&gt;</span>
+				</div>
+				Shows information about a specific union<br />
+				<ul>
+					<li><b>nameorshort:</b> The name or short version of the union (text)</li>
+				</ul>
+				<div class="code">
+					<span class="command">/union list</span>
+				</div>
+				Lists the unions with the top 10 members<br />
+
 				<h3><a id="fun">Fun</a></h3>
 				<h4>8ball</h4>
 				<p>Ask the magic 8ball your questions and get an answer!</p>
