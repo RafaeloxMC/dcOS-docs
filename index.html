@@ -61,9 +61,8 @@
 			a {
 				color: #ff0000;
 			}
-            @media (max-width: 768px) {
-
-            }
+			@media (max-width: 768px) {
+			}
 
 			.code {
 				background-color: #1f1f1f;
@@ -115,18 +114,20 @@
 					documentation will help you get started with dcOS and
 					explain how to use it. If you still have questions after
 					reading this, feel free to join our
-					<a id="link" onclick="window.open('https://discord.com/invite/N4UajQBzDt'); return false;"
+					<a
+						id="link"
+						onclick="window.open('https://discord.com/invite/N4UajQBzDt'); return false;"
 						>support server</a
 					>.
 				</p>
-                <div class="widget-container">
-                    <iframe
-                        src="https://canary.discord.com/widget?id=1041584189138554880&theme=dark"
-                        allowtransparency="true"
-                        frameborder="0"
+				<div class="widget-container">
+					<iframe
+						src="https://canary.discord.com/widget?id=1041584189138554880&theme=dark"
+						allowtransparency="true"
+						frameborder="0"
 						id="dc"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                </div>
+						sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				</div>
 				<h2><a id="setup">Setting up dcOS</a></h2>
 				<p>
 					To add dcOS to your Discord server, go to another server
@@ -140,7 +141,8 @@
 				<p>
 					If you don't share a server with dcOS you can just use this
 					<a
-						id="link" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=961632552148402218&permissions=8&scope=bot%20applications.commands'); return false;"
+						id="link"
+						onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=961632552148402218&permissions=8&scope=bot%20applications.commands'); return false;"
 						>bot invite link</a
 					>
 					to add the bot to your favorite server.
@@ -200,7 +202,8 @@
 					<li>
 						<b>message id:</b> The ID of the message containing the
 						giveaway (<a
-							id="link" onclick="window.open('https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-'); return false;"
+							id="link"
+							onclick="window.open('https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-'); return false;"
 							>how to obtain a message id</a
 						>)
 					</li>
@@ -215,7 +218,8 @@
 					<li>
 						<b>message id:</b> The ID of the message containing the
 						giveaway (<a
-							id="link" onclick="window.open('https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-'); return false;"
+							id="link"
+							onclick="window.open('https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-'); return false;"
 							>how to obtain a message id</a
 						>)
 					</li>
@@ -363,22 +367,43 @@
 				</p>
 
 				<h4>Global Banning System</h4>
-				<p>dcOS has an advanced global banning system. If a user gets banned globally, they won't be able to join any server with dcOS anymore. If you don't want that on your server, just turn the feature off using:</p>
+				<p>
+					dcOS has an advanced global banning system. If a user gets
+					banned globally, they won't be able to join any server with
+					dcOS anymore. If you don't want that on your server, just
+					turn the feature off using:
+				</p>
 				<div class="code">
 					<span class="command">/globalban toggle</span>
 				</div>
 
 				<h3><a id="economy">Economy</a></h3>
 				<h4>Unions</h4>
-				<p>In version V2-0.0.4 we added an own economy system. It contains unions, just like the Euro or other currencies. You can create a union or join one.</p>
+				<p>
+					In version V2-0.0.4 we added an own economy system. It
+					contains unions, just like the Euro or other currencies. You
+					can create a union or join one.
+				</p>
 				<div class="code">
-					<span class="command">/union create &lt;currency&gt; &lt;short&gt; &lt;description&gt;</span>
+					<span class="command"
+						>/union create &lt;currency&gt; &lt;short&gt;
+						&lt;description&gt;</span
+					>
 				</div>
 				Creates a new union for your server<br />
 				<ul>
-					<li><b>currency:</b> The full name of your unions currency (text)</li>
-					<li><b>short:</b> The short name of your unions currency (text / max. 3 chars)</li>
-					<li><b>description:</b> A short description of your union / currency (text)</li>
+					<li>
+						<b>currency:</b> The full name of your unions currency
+						(text)
+					</li>
+					<li>
+						<b>short:</b> The short name of your unions currency
+						(text / max. 3 chars)
+					</li>
+					<li>
+						<b>description:</b> A short description of your union /
+						currency (text)
+					</li>
 					<li><b>Permissions:</b> Administrator</li>
 				</ul>
 				<div class="code">
@@ -393,7 +418,10 @@
 				</div>
 				Invites a server to your union<br />
 				<ul>
-					<li><b>serverid:</b> The ID of the server to be invited (text)</li>
+					<li>
+						<b>serverid:</b> The ID of the server to be invited
+						(text)
+					</li>
 					<li><b>Permissions:</b> Administrator</li>
 				</ul>
 				<div class="code">
@@ -408,7 +436,10 @@
 				</div>
 				Kicks a server from your union<br />
 				<ul>
-					<li><b>serverid:</b> The ID of the server you want to kick (text)</li>
+					<li>
+						<b>serverid:</b> The ID of the server you want to kick
+						(text)
+					</li>
 					<li><b>Permissions:</b> Administrator</li>
 				</ul>
 				<div class="code">
@@ -416,12 +447,91 @@
 				</div>
 				Shows information about a specific union<br />
 				<ul>
-					<li><b>nameorshort:</b> The name or short version of the union (text)</li>
+					<li>
+						<b>nameorshort:</b> The name or short version of the
+						union (text)
+					</li>
 				</ul>
 				<div class="code">
 					<span class="command">/union list</span>
 				</div>
 				Lists the unions with the top 10 members<br />
+
+				<h4>Bank</h4>
+				<p>
+					The bank system was added for games with bets (e.g. Flip a
+					coin). You can store money in the bank, withdraw it and
+					more!
+				</p>
+				<div class="code">
+					<span class="command">/bank deposit &lt;amount&gt;</span>
+				</div>
+				Deposits money into your bank account<br />
+				<ul>
+					<li>
+						<b>amount:</b> The amount you want to deposit (number)
+						(text)
+					</li>
+				</ul>
+				<div class="code">
+					<span class="command">/bank withdraw &lt;amount&gt;</span>
+				</div>
+				Withdraw money from your bank account<br />
+				<ul>
+					<li>
+						<b>amount:</b> The amount you want to withdraw (number)
+						(text)
+					</li>
+				</ul>
+				<div class="code">
+					<span class="command">/bank top</span>
+				</div>
+				List the top 10 richest people in this union<br /><br />
+
+				<div class="code">
+					<span class="command">/bank balance &lt;member&gt;</span>
+				</div>
+				View the money you or someone else has<br />
+				<ul>
+					<li>
+						<b>member:</b> The person to check (member mention /
+						optional)
+					</li>
+				</ul>
+				<div class="code">
+					<span class="command">/bank transfer &lt;member&gt;</span>
+				</div>
+				Transfer money to someone else<br />
+
+				<h3><a id="games">Games</a></h3>
+
+				<h4>Flip a coin</h4>
+				<p>Flip a coin and bet on the outcome! (double your money)</p>
+				<div class="code">
+					<span class="command">/flipacoin &lt;bet&gt; &lt;amount&gt;</span>
+				</div>
+				<ul>
+					<li>
+						<b>bet:</b> Heads or tails? (selection)
+					</li>
+					<li>
+						<b>amount:</b> The amount of money you want to bet (number / optional)
+					</li>
+				</ul>
+
+				<h4>Roll a dice</h4>
+				<p>Roll a dice and bet on the outcome! (6x the bet)</p>
+				<div class="code">
+					<span class="command">/rolladice &lt;bet&gt; &lt;amount&gt;</span>
+				</div>
+				<ul>
+					<li>
+						<b>bet:</b> Which number will it be? (number / selection)
+					</li>
+					<li>
+						<b>amount:</b> The amount of money you want to bet (number / optional)
+					</li>
+				</ul>
 
 				<h3><a id="fun">Fun</a></h3>
 				<h4>8ball</h4>
@@ -429,20 +539,17 @@
 				<div class="code">
 					<span class="command">/8ball &lt;question&gt;</span>
 				</div>
-				Ask the magic 8ball<br />
 				<ul>
 					<li><b>question:</b> The question for the 8ball (text)</li>
 				</ul>
 				<h4>Meme</h4>
 				<p>Get a random meme from reddit!</p>
 				<div class="code"><span class="command">/meme</span></div>
-				Get a random meme<br />
 				<h4>Hug</h4>
 				<p>Hug your best friend!</p>
 				<div class="code">
 					<span class="command">/hug &lt;user&gt;</span>
 				</div>
-				Hug someone<br />
 				<ul>
 					<li><b>user:</b> The user to be hugged (user mention)</li>
 				</ul>
@@ -451,23 +558,51 @@
 				<div class="code">
 					<span class="command">/slap &lt;user&gt;</span>
 				</div>
-				Slap someone<br />
 				<ul>
 					<li><b>user:</b> The user to be slapped (user mention)</li>
 				</ul>
-
+				<h4>Kiss</h4>
+				<p>Kiss someone that deserves it!</p>
+				<div class="code">
+					<span class="command">/kiss &lt;user&gt;</span>
+				</div>
+				<ul>
+					<li><b>user:</b> The user to be kissed (user mention)</li>
+				</ul>
+				<h4>Rizz</h4>
+				<p>Rizz someone up!</p>
+				<div class="code">
+					<span class="command">/rizz &lt;user&gt;</span>
+				</div>
+				<ul>
+					<li>
+						<b>user:</b> The user to be rizzed (user mention /
+						optional)
+					</li>
+				</ul>
+				<h4>Joke</h4>
+				<p>Get a random joke!</p>
+				<div class="code">
+					<span class="command">/joke &lt;type&gt;</span>
+				</div>
+				<ul>
+					<li>
+						<b>type:</b> The type of joke you want to hear
+						(selection)
+					</li>
+				</ul>
 				<h2><a id="support">Support</a></h2>
 				<p>
 					If you need any assistance or have any questions, please
 					join our
-					<a id="link" onclick="window.open('https://discord.com/invite/N4UajQBzDt'); return false;"
+					<a
+						id="link"
+						onclick="window.open('https://discord.com/invite/N4UajQBzDt'); return false;"
 						>support server</a
 					>
 					and create a new forum post.
 				</p>
 			</div>
-
-
 		</div>
 	</body>
 </html>
